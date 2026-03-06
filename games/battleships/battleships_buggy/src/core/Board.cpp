@@ -82,7 +82,7 @@ namespace bs {
         if (cell == Cell::Hit || cell == Cell::Miss)
         {
             SetCell(target, Cell::Miss); // BUG: overwrites Hit into Miss
-            return ShotResult::Miss;     // BUG: should return AlreadyTried (and not consume turn)
+            return ShotResult::AlreadyTried;     // BUG: should return AlreadyTried (and not consume turn)
         }
 
         if (cell == Cell::Empty)

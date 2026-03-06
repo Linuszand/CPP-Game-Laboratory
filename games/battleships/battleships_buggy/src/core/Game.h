@@ -44,7 +44,6 @@ namespace bs {
         // Setup actions
         PlaceResult PlaceShipForCurrent(const Ship& ship);
         void NextPlayerDuringSetup();
-
         // Play actions
         ShotResult ShootAtOpponent(Coord c);
 
