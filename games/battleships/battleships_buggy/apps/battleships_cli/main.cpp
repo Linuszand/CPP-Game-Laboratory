@@ -56,9 +56,10 @@ int main()
             {
                 std::cout << "All ships placed for " << player.name << ". Press Enter to continue...\n";
                 std::string tmp; std::getline(std::cin, tmp);
-
-                game.FinishSetupIfReady(); // BUG: may start Playing too early (before both players finished)
+                
                 game.NextPlayerDuringSetup();
+                game.FinishSetupIfReady(); // BUG: may start Playing too early (before both players finished)
+                
                 continue;
             }
 

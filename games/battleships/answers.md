@@ -1,7 +1,7 @@
 ﻿# Battleships Buggy Lab — Answers
 
 ## Team
-- Team name:
+- Team name: Captain Linus
 - Partner A:
 - Partner B:
 

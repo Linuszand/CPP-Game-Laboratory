@@ -141,14 +141,14 @@ A player wins immediately when **all ships in the opponent’s fleet are sunk**.
 Teams must verify the buggy code against these criteria, mark Pass/Fail, and create fixes in branches.
 
 | Criterion | Type | Status (Pass/Fail) |
-|---|---|---|
-| Setup starts with Player 1 and switches to Player 2 after Player 1 completes placement. | Functional |  |
-| Playing starts only after BOTH players placed the full fleet. | Functional |  |
-| Placement rejects overlap and out-of-bounds with correct error reason. | Correctness |  |
-| Shooting the same coordinate twice returns AlreadyTried and does not change turn. | Correctness |  |
-| Tracking board shows hits and misses correctly. | Correctness |  |
-| Win condition triggers only when opponent fleet is sunk. | Correctness |  |
-| Input handling never crashes on malformed input. | Robustness |  |
+|---|---|--------------------|
+| Setup starts with Player 1 and switches to Player 2 after Player 1 completes placement. | Functional | Fail               |
+| Playing starts only after BOTH players placed the full fleet. | Functional | Fail               |
+| Placement rejects overlap and out-of-bounds with correct error reason. | Correctness | Fail               |
+| Shooting the same coordinate twice returns AlreadyTried and does not change turn. | Correctness | Fail               |
+| Tracking board shows hits and misses correctly. | Correctness | Fail               |
+| Win condition triggers only when opponent fleet is sunk. | Correctness |                    |
+| Input handling never crashes on malformed input. | Robustness |                    |
 
 ---
 

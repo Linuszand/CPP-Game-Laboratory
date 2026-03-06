@@ -19,7 +19,7 @@ add_executable(battleships_buggy_cli
     
     src/cli/ConsoleRenderer.cpp
     src/cli/Input.cpp
- "src/core/Enums.h" "src/core/Coord.cpp" "src/cli/main.cpp")
+ "src/core/Enums.h" "src/core/Coord.cpp" "apps/battleships_cli/main.cpp")
 target_link_libraries(battleships_buggy_cli PRIVATE battleships_buggy_core)
 target_include_directories(battleships_buggy_cli PRIVATE src)
 
