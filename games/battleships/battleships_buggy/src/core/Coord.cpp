@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <cctype>
 #include <sstream>
+#include <iostream>
 
 namespace bs {
 
@@ -34,7 +35,15 @@ namespace bs {
             {
                 hasLetter = true;
                 char up = static_cast<char>(std::toupper(static_cast<unsigned char>(ch)));
-                x = up - 'A';
+
+                // Change: Checks between range A and J
+                if (up >= 'A' && up <= 'J')
+                {
+                    x = up - 'A';
+                } else
+                {
+                    x = - 1;
+                }
                 break;
             }
         }
@@ -43,6 +52,13 @@ namespace bs {
         std::string digits;
         for (char ch : s)
         {
+            // Change: out of bounds if minus
+            if (ch == '-')
+            {
+                y = -1;
+                break;
+            }
+            
             if (std::isdigit(static_cast<unsigned char>(ch))) // BUG Fixed: '-' allowed anywhere; removed -
                 digits.push_back(ch);
         }
